@@ -1,0 +1,12 @@
+{
+  "name": "examplelab7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "getProducts.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

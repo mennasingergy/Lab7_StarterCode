@@ -14,8 +14,7 @@ beforeAll((done) => {
 });
 
 afterAll((done) => {
-    // Close the server after all tests
-    server.close(done); 
+    server.close(done); // Close the server after all tests
 });
 
 describe('API Tests for /products', () => {

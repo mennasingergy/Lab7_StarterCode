@@ -9,13 +9,11 @@ jest.mock('./getProducts');
 let server;
 
 beforeAll((done) => {
-    // Start the server only once
-    server = app.listen(3000, done); 
+    server = app.listen(3000, done); // Start the server only once
 });
 
 afterAll((done) => {
-    // Close the server after all tests
-    server.close(done); 
+    server.close(done); // Close the server after all tests
 });
 
 describe('API Tests for /products', () => {

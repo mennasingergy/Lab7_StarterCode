@@ -1,26 +1,21 @@
 const request = require('supertest');
-const app = require('./index');
-const getProducts = require('./getProducts');
-
-
+const app = require('./index'); 
+const getProducts = require('./getProducts'); 
 // Mock the getProducts module
 jest.mock('./getProducts');
 
 let server;
 
 beforeAll((done) => {
-    // Start the server only once
-    server = app.listen(3000, done); 
+    server = app.listen(3000, done); // Start the server only once
 });
 
 afterAll((done) => {
-    // Close the server after all tests
-    server.close(done); 
+    server.close(done); // Close the server after all tests
 });
 
 describe('API Tests for /products', () => {
     it('GET /products should return a list of products with the required properties', async () => {
-
         // Mock the implementation of getProducts to return dummy data
         getProducts.mockResolvedValue([
             { id: 1, name: 'Product A', price: 10.99 },

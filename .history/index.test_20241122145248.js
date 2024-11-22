@@ -14,7 +14,6 @@ beforeAll((done) => {
 });
 
 afterAll((done) => {
-    // Close the server after all tests
     server.close(done); 
 });
 
